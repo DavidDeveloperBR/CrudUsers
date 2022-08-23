@@ -23,5 +23,4 @@ public class AplicationControllerAdvice {
         return new ApiErrors(errors);
     }
 
-
 }

@@ -55,14 +55,12 @@ public class UsersServiceImpl implements UsersService {
     @Override
     @Transactional
     public void atualizaUser(Integer id, String name, String email) {
-
-        repository.findById(id).map(user -> {
-            user.setNome(name);
-            user.setEmail(email);
-            return repository.save(user);
-        }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                "Usuário não encontrado"));
-
+            repository.findById(id).map(user -> {
+                user.setNome(name);
+                user.setEmail(email);
+                return repository.save(user);
+            }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    "Usuário não encontrado"));
     }
 
 }
