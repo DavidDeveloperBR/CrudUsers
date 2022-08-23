@@ -5,6 +5,15 @@ Prova de conceito para Junior em Spring Boot
 
 POST: `http://localhost:8085/api/drivers`
 
+{
+    "usuario": "username",
+    "senha": "password",
+    "nome": "nome",
+    "sobrenome": "sobrenome",
+    "email":"email@mail.com",
+    "ativo": true
+}
+
 ### Response
 
 {
